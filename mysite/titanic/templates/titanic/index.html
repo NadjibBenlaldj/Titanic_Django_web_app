@@ -1,0 +1,39 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'titanic/style.css' %}">
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content%}
+
+    <h2>Check probability of survival</h2>
+    <br>
+
+ <form method="post" enctype="multipart/form-data" action="results">
+ {% csrf_token %}
+ <div class="col-md-4 col-sm-4"><label for="fname">Name:</label> </div> <input name="name" type="text" value={{temp.name}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Sex:</label> </div> <input type="text" id="lname" name="sex" value={{temp.sex}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Age:</label> </div> <input type="text" id="lname" name="age" value={{temp.age}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Fare:</label> </div> <input type="text" id="lname" name="fare" value={{temp.fare}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Parch:</label> </div> <input type="text" id="lname" name="parch" value={{temp.parch}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Sibsp:</label> </div> <input type="text" id="lname" name="sibsp" value={{temp.sibsp}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Ticket class:</label> </div> <input type="text" id="lname" name="ticket_class" value={{temp.ticket_class}}><br><br>
+ <div class="col-md-4 col-sm-4"><label for="fname">Embarked:</label></div>  <input type="text" id="fname" name="embarked" value={{temp.Embarked}}><br><br>
+ <br>
+
+
+ <input type="submit" value="Submit" ></div>
+
+</form>
+<br>
+
+
+{% endblock %}
+</body>
+</html>
