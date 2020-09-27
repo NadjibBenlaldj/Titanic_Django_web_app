@@ -1,2 +1,2 @@
 # Titanic Django web app
-Tutorial on deploying ML using Django
+Tutorial on deploying ML model using Django
